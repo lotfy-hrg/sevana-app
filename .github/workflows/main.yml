@@ -27,6 +27,7 @@ jobs:
         run: |
           mkdir -p build_src
           unzip -o SEVANA_Android_APK_Project.zip -d build_src
+          echo "dependencies { implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22') }" >> build_src/app/build.gradle
           cd build_src
           gradle assembleDebug --no-daemon
 
